@@ -33,6 +33,16 @@ build.gradle 파일에 아래와 같이 설정하여 SDK dependency를 추가 �
 implementation 'io.omnitalk:omnitalksdk:x.x.x'
 ```
 
+SDK 실행에 필요한 패키지를 설치하기 위해서 repository를 추가 합니다.
+```
+repositories {
+    ...
+    mavenCentral()
+    jcenter()
+}
+```
+
+
 * Manifest 설정
     * SDK 사용에 필요한 권한을 획득하기 위해서 Android Manifest 설정합니다.
     * 기본적으로 `CAMERA`, `RECORD_AUDIO` 등 일부 권한을 필요로 합니다.

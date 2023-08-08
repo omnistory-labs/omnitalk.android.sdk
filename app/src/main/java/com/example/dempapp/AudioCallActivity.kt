@@ -48,7 +48,7 @@ class AudioCallActivity : AppCompatActivity() {
                 } else if (eventName == OmniEvent.CONNECTED_EVENT) {
                     callingText.text = "통화중..."
                 } else if (eventName == OmniEvent.LEAVE_EVENT) {
-                    sdk.leave(mySession)
+                    sdk.leave()
                     finish()
                 }
             }
@@ -58,13 +58,13 @@ class AudioCallActivity : AppCompatActivity() {
         })
 
         backBtn.setOnClickListener {
-            sdk.leave(mySession)
+            sdk.leave()
             finish()
         }
 
         val onBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                sdk.leave(mySession)
+                sdk.leave()
                 finish()
             }
         }

@@ -93,13 +93,13 @@ class VideoRoomActivity : AppCompatActivity() {
         })
 
         backBtn.setOnClickListener {
-            sdk.leave(mySession)
+            sdk.leave()
             finish()
         }
 
         val onBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                sdk.leave(mySession)
+                sdk.leave()
                 finish()
             }
         }

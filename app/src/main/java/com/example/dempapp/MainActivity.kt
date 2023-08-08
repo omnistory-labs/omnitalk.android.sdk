@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Omnitalk.initSdk(serviceId, serviceKey, applicationContext)
+        Omnitalk.sdkInit(serviceId, serviceKey, applicationContext)
 
         val videoRoomBtn = findViewById<Button>(R.id.videoRoomBtn)
         val videoCallBtn = findViewById<Button>(R.id.videoCallBtn)
